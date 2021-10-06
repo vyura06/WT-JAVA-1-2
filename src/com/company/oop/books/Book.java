@@ -1,4 +1,4 @@
-package com.example.classes.Books;
+package com.company.oop.books;
 
 import java.util.Objects;
 
@@ -79,9 +79,9 @@ public class Book implements Cloneable, Comparable<ProgrammerBook>{
     @Override
     public int hashCode() {
         long hash = price;
-        hash = hash * 31 + Objects.hashCode(title);
-        hash = hash * 31 + Objects.hashCode(author);
-        hash = hash * 31 + Objects.hashCode(edition);
+        hash = hash * 31 + (title == null ? 0 : title.hashCode());
+        hash = hash * 31 + (author == null ? 0 : author.hashCode());
+        hash = hash * 31 + (edition == null ? 0 : edition.hashCode());
         return (int) (hash ^ (hash >>> 32));
     }
 
@@ -100,7 +100,7 @@ public class Book implements Cloneable, Comparable<ProgrammerBook>{
         try {
             return (Book) super.clone();
         } catch (CloneNotSupportedException e) {
-            throw new InternalError(e);
+            throw new AssertionError(e);
         }
     }
 }

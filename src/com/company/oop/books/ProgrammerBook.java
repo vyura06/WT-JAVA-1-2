@@ -1,4 +1,4 @@
-package com.example.classes.Books;
+package com.company.oop.books;
 
 import java.util.Objects;
 
@@ -45,7 +45,7 @@ public class ProgrammerBook extends Book {
     @Override
     public int hashCode() {
         int hash = super.hashCode();
-        hash = hash * 31 + Objects.hashCode(language);
+        hash = hash * 31 + (language == null ? 0 : language.hashCode());
         hash = hash * 31 + level;
         return hash ^ (hash >>> 16);
     }
