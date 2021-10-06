@@ -1,4 +1,4 @@
-package com.example.fundamentals;
+package com.company.algoritms;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -38,7 +38,7 @@ public class Prime {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int[] array = Arrays.stream(Input.readArray(scanner)).
+        int[] array = Arrays.stream(InputUtils.readArray(scanner)).
                 mapToInt(value -> (int) value).toArray();
 
         System.out.println("Your array:");

@@ -1,4 +1,4 @@
-package com.example.fundamentals;
+package com.company.algoritms;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -46,7 +46,7 @@ public class Sequence {
         try {
             Scanner scanner = new Scanner(System.in);
 
-            double[] doubles = Input.readArray(scanner);
+            double[] doubles = InputUtils.readArray(scanner);
             int[] array = Arrays.stream(doubles).mapToInt(i -> (int) i).toArray();
 
             System.out.println(amountToLis(array));

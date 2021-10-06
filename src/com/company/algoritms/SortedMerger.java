@@ -1,10 +1,10 @@
-package com.example.fundamentals;
+package com.company.algoritms;
 
 import java.util.Arrays;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class Merger {
+public class SortedMerger {
     public static int binarySearch(double key, double[] array,
                                    int low, int high) {
         Objects.requireNonNull(array);
@@ -51,10 +51,10 @@ public class Merger {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter sorted array");
-        double[] a = Input.readArray(scanner);
+        double[] a = InputUtils.readArray(scanner);
 
         System.out.println("Enter sorted array");
-        double[] b = Input.readArray(scanner);
+        double[] b = InputUtils.readArray(scanner);
 
         System.out.println("First array");
         System.out.println(Arrays.toString(a));

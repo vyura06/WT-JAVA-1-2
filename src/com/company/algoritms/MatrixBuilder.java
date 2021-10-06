@@ -1,4 +1,4 @@
-package com.example.fundamentals;
+package com.company.algoritms;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public class MatrixBuilder {
     public static void main(String[] args) {
         try {
             Scanner scanner = new Scanner(System.in);
-            double[] array = Input.readArray(scanner);
+            double[] array = InputUtils.readArray(scanner);
             System.out.println("Your array:");
             System.out.println(Arrays.toString(array));
 

@@ -1,9 +1,9 @@
-package com.example.fundamentals;
+package com.company.algoritms;
 
 import java.util.Scanner;
 import java.util.concurrent.CancellationException;
 
-public class MathFun {
+public class Calculator {
     public static double calc(double x, double y) {
         double sin = Math.sin(x + y);
         double a = 1 + sin * sin;
@@ -19,8 +19,8 @@ public class MathFun {
         try {
             Scanner scanner = new Scanner(System.in);
             String cancel = "cancel";
-            double x = Input.readDouble(scanner, "Enter x", cancel);
-            double y = Input.readDouble(scanner, "Enter y", cancel);
+            double x = InputUtils.readDouble(scanner, "Enter x", cancel);
+            double y = InputUtils.readDouble(scanner, "Enter y", cancel);
             System.out.println("F(x, y)=" + calc(x, y));
         } catch (CancellationException ignored) {
         }

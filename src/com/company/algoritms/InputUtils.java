@@ -1,10 +1,10 @@
-package com.example.fundamentals;
+package com.company.algoritms;
 
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.concurrent.CancellationException;
 
-public class Input {
+public class InputUtils {
     public static double readDouble(Scanner scanner, String msg, String cancel) throws CancellationException {
         System.out.println(msg);
         return readDouble(scanner, cancel);
@@ -31,7 +31,7 @@ public class Input {
         String token = scanner.nextLine();
         switch (token) {
             case "1": {
-                int size = (int) Input.readDouble(scanner, "Enter size", "cancel");
+                int size = (int) InputUtils.readDouble(scanner, "Enter size", "cancel");
                 System.out.println("Enter numbers:");
                 double[] array = new double[size];
                 for (int i = 0; i < array.length; i++) {

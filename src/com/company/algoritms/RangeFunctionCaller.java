@@ -1,4 +1,4 @@
-package com.example.fundamentals;
+package com.company.algoritms;
 
 import java.util.Scanner;
 import java.util.concurrent.CancellationException;
@@ -16,9 +16,9 @@ public class RangeFunctionCaller {
             String cancel = "cancel";
             Scanner scanner = new Scanner(System.in);
 
-            double a = Input.readDouble(scanner, "Enter a:", cancel);
-            double b = Input.readDouble(scanner, "Enter b:", cancel);
-            double h = Input.readDouble(scanner, "Enter h:", cancel);
+            double a = InputUtils.readDouble(scanner, "Enter a:", cancel);
+            double b = InputUtils.readDouble(scanner, "Enter b:", cancel);
+            double h = InputUtils.readDouble(scanner, "Enter h:", cancel);
 
             callFunctionOnRange(a, b, h);
         } catch (IllegalArgumentException e) {

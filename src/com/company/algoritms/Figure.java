@@ -1,4 +1,4 @@
-package com.example.fundamentals;
+package com.company.algoritms;
 
 import java.util.Scanner;
 import java.util.concurrent.CancellationException;
@@ -29,19 +29,19 @@ public class Figure {
         final String cancel = "cancel";
         Scanner scanner = new Scanner(System.in);
         try {
-            double yMin = Input.readDouble(scanner, "Enter yMin: ", cancel);
-            double yMax = Input.readDouble(scanner, "Enter yMax: ", cancel);
+            double yMin = InputUtils.readDouble(scanner, "Enter yMin: ", cancel);
+            double yMax = InputUtils.readDouble(scanner, "Enter yMax: ", cancel);
 
-            double x1 = Input.readDouble(scanner, "Enter x1: ", cancel);
-            double x2 = Input.readDouble(scanner, "Enter x2: ", cancel);
+            double x1 = InputUtils.readDouble(scanner, "Enter x1: ", cancel);
+            double x2 = InputUtils.readDouble(scanner, "Enter x2: ", cancel);
 
             while (true) {
                 System.out.println("Do you want to check the point? [Yes=yes,No=other]");
                 String token = scanner.nextLine();
                 if (!"yes".equals(token))
                     break;
-                double x = Input.readDouble(scanner, "Enter x: ", cancel);
-                double y = Input.readDouble(scanner, "Enter y: ", cancel);
+                double x = InputUtils.readDouble(scanner, "Enter x: ", cancel);
+                double y = InputUtils.readDouble(scanner, "Enter y: ", cancel);
 
                 boolean contains = contains(yMin, yMax, x1, x2, x, y);
                 System.out.println("Contains? " + contains);
